@@ -10,13 +10,10 @@ void swap(double* a, double* b){
 }
 
 void rshift(int n, double* A, int k){
-    for(int i = 0; i < k; i++){
-        for(int j = i; j < n-1; j++){
-            swap(&A[j], &A[j + 1]);
+    for(int i = 0; i < k % n; i++){
+        for(int j = n-1; j > 0; j--){
+            swap(&A[j], &A[j - 1]);
         }
-        // for(int j = 0; j < n; j++){
-        //     printf("%lf ", A[j]);
-        // }
     }
 }
 
@@ -29,8 +26,8 @@ int main(){
     }
     rshift(n, arr, k);
 
-    for(int i = 0; i < 0; i++){
+    for(int i = 0; i < n; i++){
         printf("%lf ", arr[i]);
     }
     return 0;
-}
+}//1 3 5 7 9 2 4 6 8 10
