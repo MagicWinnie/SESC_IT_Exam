@@ -28,4 +28,5 @@ int compute_RPN(char* input){
 int main(){
     char* input = "1 2 + 4 * 3 +\0";
     printf("%d\n", compute_RPN(input));
+    return 0;
 }

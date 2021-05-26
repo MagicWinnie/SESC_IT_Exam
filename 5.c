@@ -37,9 +37,10 @@ int main(){
             fscanf(fin, "%d", &M[i][j]);
         }
     }
+    fclose(fin);
     int* list = reachable(n, M, A);
     for(int i = 0; i < n; i++){
         if(list[i]) printf("%d ", i + 1);
     }
-    fclose(fin);
+    return 0;
 }

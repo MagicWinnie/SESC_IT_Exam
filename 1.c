@@ -26,4 +26,5 @@ int main(){
     printf("\n");
     root = delete_min(root);
     print_tree(root);
+    return 0;
 }
