@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #define N 5
 
-void traverse(double A[N][N], double B[N][N])
+void traverse(double **A, double **B)
 {
     int i = 0, j, k = 0, p = 0;
     int a = 0, b = 0;
@@ -66,22 +66,26 @@ void traverse(double A[N][N], double B[N][N])
 
 int main()
 {
-    double A[N][N] = {
-        {1, 2, 3, 4, 5},
-        {6, 7, 8, 9, 10},
-        {11, 12, 13, 14, 15},
-        {16, 17, 18, 19, 20},
-        {21, 22, 23, 24, 25}
-        }, B[N][N];
+    FILE* fin = fopen("4.txt", "r");
+    double **A, **B;
+    A = (double**)calloc(N, sizeof(double*));
+    B = (double**)calloc(N, sizeof(double*));
 
+    for(int i = 0; i < N; i++)
+    {
+        A[i] = (double*)calloc(N, sizeof(double));
+        B[i] = (double*)calloc(N, sizeof(double));
+        
+        for (int j = 0; j < N; j++)
+            fscanf(fin, "%lf", &A[i][j]);
+    }
+    
     traverse(A, B);
 
     for (int i = 0; i < N; i++)
     {
         for (int j = 0; j < N; j++)
-        {
             printf("%lf ", B[i][j]);
-        }
         printf("\n");
     }
     return 0;
