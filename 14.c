@@ -42,4 +42,5 @@ int main()
 {
     printf("%d\n", Ack(1, 2));
     printf("%d\n", AckNonRecursive(1, 2));
+    return 0;
 }
