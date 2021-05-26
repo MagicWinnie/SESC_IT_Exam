@@ -34,11 +34,11 @@ int main(){
     scanf("%d", &n);
     double* arr = calloc(n, sizeof(double));
     for(int i = 0; i < n; i++){
-        scanf("%d", &arr[i]);
+        scanf("%lf", &arr[i]);
     }
     printf("%d\n", next_perm(n, arr));
     for(int i = 0; i < n; i++){
-        printf("%d ", arr[i]);
+        printf("%lf ", arr[i]);
     }
     return 0;
 }
