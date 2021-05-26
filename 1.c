@@ -1,8 +1,8 @@
 #include "bintree.h"
 
-struct node* delete_min(struct node* root){
+Tree* delete_min(Tree* root){
     if(!root) return NULL;
-    struct node* buf;
+    Tree* buf;
     if(root->lt == NULL){
         buf = root->rt;
         free(root);
@@ -15,7 +15,7 @@ struct node* delete_min(struct node* root){
 }
 
 int main(){
-    struct node *root = NULL;
+    Tree *root = NULL;
     root = add(root, 5);
     root = add(root, 3);
     root = add(root, 10);
