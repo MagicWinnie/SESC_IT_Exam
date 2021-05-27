@@ -27,7 +27,7 @@ int* reachable(int n, int** M, int A){
 }
 
 int main(){
-    FILE* fin = fopen("graph5.txt", "r");
+    FILE* fin = fopen("5.txt", "r");
     int n, A;
     int** M = calloc(n, sizeof(int*));
     fscanf(fin, "%d %d", &n, &A);
