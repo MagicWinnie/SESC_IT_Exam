@@ -29,8 +29,8 @@ int* reachable(int n, int** M, int A){
 int main(){
     FILE* fin = fopen("5.txt", "r");
     int n, A;
-    int** M = calloc(n, sizeof(int*));
     fscanf(fin, "%d %d", &n, &A);
+    int** M = calloc(n, sizeof(int*));
     for(int i = 0; i < n; i++){
         M[i] = calloc(n, sizeof(int));
         for(int j = 0; j < n; j++){
