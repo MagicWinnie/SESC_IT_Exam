@@ -1,9 +1,7 @@
-// BFS algorithm in C
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#define SIZE 40
+#define SIZE 100
 
 struct queue
 {
@@ -147,7 +145,6 @@ void enqueue(struct queue *q, int value)
     }
 }
 
-// Removing elements from queue
 int dequeue(struct queue *q)
 {
     int item;
@@ -161,10 +158,7 @@ int dequeue(struct queue *q)
         item = q->items[q->front];
         q->front++;
         if (q->front > q->rear)
-        {
-            // printf("Resetting queue ");
             q->front = q->rear = -1;
-        }
     }
     return item;
 }
